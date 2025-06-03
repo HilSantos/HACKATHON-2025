@@ -9,18 +9,14 @@ Criar uma api multilingue para um projeto Hackathon 2025 que acontecerá no Sena
 | 4     | Criar banco com relacionamento cliente-endereço   |
 | 5     | Implementar modais multilíngues no front-end      |
 
-Recursos da API multilíngue:
-🚀 Suporte a vários idiomas (via ?lang=pt).
-
-👤 Cadastro e login de cliente.
-
-📦 Clientes com múltiplos endereços.
-
-🖥️ Modal na interface web com tradução.
-
-⚙️ Fácil expansão para mais idiomas e páginas.
+//Recursos da API multilíngue://
+//🚀 Suporte a vários idiomas (via ?lang=pt).//
+//👤 Cadastro e login de cliente.//
+//📦 Clientes com múltiplos endereços.//
+//🖥️ Modal na interface web com tradução.//
+//⚙️ Fácil expansão para mais idiomas e páginas.//
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Preparar um repositório base no GitHub com a estrutura completa para o projeto:
+//Preparar um repositório base no GitHub com a estrutura completa para o projeto://
 
 🔗 Repositório GitHub: https://github.com/seu-usuario/api-multilingue-clientes
 
@@ -45,7 +41,7 @@ api-multilingue-clientes/
 │   └── estrutura.sql
 └── README.md
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Banco de Dados MySQL (estrutura.sql)
+//Banco de Dados MySQL (estrutura.sql)//
 
 CREATE TABLE clientes (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -65,7 +61,8 @@ CREATE TABLE enderecos (
     FOREIGN KEY (cliente_id) REFERENCES clientes(id) ON DELETE CASCADE
 );
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Arquivos de tradução (ex: api/lang/pt.json)
+//Arquivos de tradução (ex: api/lang/pt.json)//
+
 json
 {
   "login": "Entrar",
@@ -85,7 +82,7 @@ api/lang/en.json:
   "logout": "Logout"
 }
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Carregador de idioma (api/lang.php)
+//Carregador de idioma (api/lang.php)//
 
 <?php
 function getLang($langCode) {
@@ -96,7 +93,7 @@ function getLang($langCode) {
     return json_decode(file_get_contents($file), true);
 }
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
- Exemplo de endpoint de login (api/login.php)
+ //Exemplo de endpoint de login (api/login.php)//
 
 <?php
 include_once 'lang.php';
@@ -112,7 +109,8 @@ echo json_encode([
     "login_button" => $labels['login']
 ]);
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Front-end dinâmico (HTML + JS)
+//Front-end dinâmico (HTML + JS)//
+
 login.html
 
 <select id="langSelect">
@@ -148,10 +146,10 @@ document.getElementById("langSelect").addEventListener("change", function () {
   carregarIdioma(this.value);
 });
 
-// Carrega idioma padrão
+// Carrega idioma padrão//
 carregarIdioma("en");
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
-Página principal com Modal (index.html)
+//Página principal com Modal (index.html)//
 
 <button onclick="abrirModal()">Show Modal</button>
 
@@ -179,36 +177,26 @@ function fecharModal() {
 .close { float: right; cursor: pointer; }
 </style>
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-🛠️ Funcionalidades Implementadas:
-
-API Multilíngue: Suporte a múltiplos idiomas utilizando arquivos JSON para traduções.
-
-Login e Cadastro de Clientes: Formulários com validação e integração com a API.
-
-Cadastro de Múltiplos Endereços: Cada cliente pode ter vários endereços associados.
-
-Página Principal com Modal: Interface web com modal responsivo.
-
-Banco de Dados MySQL: Script SQL para criação das tabelas necessárias.
-
-🚀 Como Utilizar
-Clonar o Repositório:
+//🛠️ Funcionalidades Implementadas://
+//API Multilíngue: Suporte a múltiplos idiomas utilizando arquivos JSON para traduções.//
+//Login e Cadastro de Clientes: Formulários com validação e integração com a API.//
+//Cadastro de Múltiplos Endereços: Cada cliente pode ter vários endereços associados.//
+//Página Principal com Modal: Interface web com modal responsivo.//
+//Banco de Dados MySQL: Script SQL para criação das tabelas necessárias.//
+//🚀 Como Utilizar//
+//Clonar o Repositório://
 
 bash
 Copiar
 Editar
 git clone https://github.com/seu-usuario/api-multilingue-clientes.git
-Configurar o Banco de Dados:
 
-Importe o arquivo sql/estrutura.sql no seu servidor MySQL.
-
-Atualize as credenciais de acesso ao banco no arquivo db/conexao.php.
-
-Executar o Projeto:
-
-Utilize um servidor local (como XAMPP ou WAMP) e aponte para o diretório public/.
-
-Acessar as Páginas:
+//Configurar o Banco de Dados://
+//Importe o arquivo sql/estrutura.sql no seu servidor MySQL.//
+//Atualize as credenciais de acesso ao banco no arquivo db/conexao.php.//
+//Executar o Projeto://
+//Utilize um servidor local (como XAMPP ou WAMP) e aponte para o diretório public/.//
+//Acessar as Páginas://
 
 Login: http://localhost/api-multilingue-clientes/public/login.html
 
