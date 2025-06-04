@@ -19,6 +19,20 @@ index.html
     <button onclick="window.location.href='main.html'">Português</button>
     <button onclick="window.location.href='main.html'">English</button>
     <button onclick="window.location.href='main.html'">Español</button>
+    <button onclick="window.location.href='main.html'">Italiano</button>
+    <button onclick="window.location.href='main.html'">Français</button>
+    <button onclick="window.location.href='main.html'">Deutsch</button>
+    <button onclick="window.location.href='main.html'">Cymraeg</button>
+    <button onclick="window.location.href='main.html'">Gàidhlig na h-Alba</button>
+    <button onclick="window.location.href='main.html'">Gaeilge</button>
+    <button onclick="window.location.href='main.html'">Nederlands</button>
+    <button onclick="window.location.href='main.html'">Lëtzebuergesch</button>
+    <button onclick="window.location.href='main.html'">Dansk</button>
+    <button onclick="window.location.href='main.html'">Norsk</button>
+    <button onclick="window.location.href='main.html'">Suomalainen</button>
+    <button onclick="window.location.href='main.html'">Svenska</button>
+    <button onclick="window.location.href='main.html'">Català</button>
+    <button onclick="window.location.href='main.html'">Malti</button>
   </div>
 </body>
 </html>
