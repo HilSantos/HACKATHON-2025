@@ -33,6 +33,8 @@ index.html
     <button onclick="window.location.href='main.html'">Svenska</button>
     <button onclick="window.location.href='main.html'">Català</button>
     <button onclick="window.location.href='main.html'">Malti</button>
+    <button onclick="window.location.href='main.html'">ελληνικά</button>
+    <button onclick="window.location.href='main.html'">Íslenskur</button>
   </div>
 </body>
 </html>
