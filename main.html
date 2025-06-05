@@ -1,0 +1,55 @@
+//criação de cadastro em varias linguas, como no index.html//
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login | Cadastro | Recuperar Senha</title>
+  <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+  <div class="container">
+    <div class="tabs">
+      <button onclick="showTab('login')">Login</button>
+      <button onclick="showTab('cadastro')">Cadastro</button>
+      <button onclick="showTab('recupera')">Rec. Senha</button>
+    </div>
+
+    <div id="login" class="tab active">
+      <h2>Login</h2>
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Senha">
+      <button>Entrar</button>
+    </div>
+
+    <div id="cadastro" class="tab">
+      <h2>Cadastro</h2>
+      <input type="email" placeholder="Email">
+      <input type="text" placeholder="Nome">
+      <input type="date" placeholder="Data de Nascimento">
+      <input type="text" placeholder="Endereço Detalhado">
+      <input type="password" placeholder="Senha">
+      <input type="text" placeholder="Registro Europeu">
+      <input type="text" placeholder="Tempero">
+      <input type="tel" placeholder="Telefone">
+      <button>Cadastrar</button>
+    </div>
+
+    <div id="recupera" class="tab">
+      <h2>Recuperar Senha</h2>
+      <input type="text" placeholder="Código">
+      <input type="password" placeholder="Nova Senha">
+      <input type="password" placeholder="Confirmar Nova Senha">
+      <button>Redefinir Senha</button>
+    </div>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
