@@ -1,0 +1,59 @@
+//webpage responsiva em HTML e CSS tanto em desktop como em mobile//
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seleção de Idioma</title>
+  <link rel="stylesheet" href="style.css">
+    <script>
+        function showTab(tabId) {
+        const tabs = document.querySelectorAll('.tab');
+        tabs.forEach(tab => {
+            tab.classList.remove('active');
+        });
+        document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+  <div class="language-screen">
+    <h1>Selecione o idioma</h1>
+    <button onclick="window.location.href='main.html'">Português</button>
+    //lingua oficial de Portugal e Brasil//
+    <button onclick="window.location.href='main.html'">English</button>
+    //lingua oficial dos Estados Unidos e Inglaterra//
+    <button onclick="window.location.href='main.html'">Español</button>
+    //lingua oficial da Espanha//
+    <button onclick="window.location.href='main.html'">Italiano</button>
+    //lingua oficial da Itália//
+    <button onclick="window.location.href='main.html'">Français</button>
+    //lingua oficial da França//
+    <button onclick="window.location.href='main.html'">Deutsch</button>
+    //lingua oficial da Alemanha//
+    <button onclick="window.location.href='main.html'">Cymraeg</button>
+    //lingua oficial do País de Gales//
+    <button onclick="window.location.href='main.html'">Gàidhlig na h-Alba</button>
+    //lingua oficial da Escócia//
+    <button onclick="window.location.href='main.html'">Gaeilge</button>
+    //lingua oficial da Irlanda//
+    <button onclick="window.location.href='main.html'">Nederlands</button>
+    //lingua oficial dos Países Baixos//
+    <button onclick="window.location.href='main.html'">Lëtzebuergesch</button>
+    //lingua oficial de Luxemburgo//
+    <button onclick="window.location.href='main.html'">Dansk</button>
+    //lingua oficial da Dinamarca//
+    <button onclick="window.location.href='main.html'">Norsk</button>
+    //lingua oficial da Noruega//
+    <button onclick="window.location.href='main.html'">Suomalainen</button>
+    //lingua oficial da Finlândia//
+    <button onclick="window.location.href='main.html'">Svenska</button>
+    //lingua oficial da Suécia//
+    <button onclick="window.location.href='main.html'">Català</button>
+    //lingua oficial da Catalunha//
+    <button onclick="window.location.href='main.html'">Malti</button>
+    //lingua oficial de Malta//
+  </div>
+</body>
+</html>
