@@ -1,0 +1,83 @@
+//CSS do index e main do HTML para Primeira tela = selecionar idioma// 
+//Segunda tela = Login    Cadastro    Rec.senha//
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f2f2f2bb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .language-screen {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .language-screen button {
+    margin: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .container {
+    background-color: #b85c5c;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(49, 48, 48, 0.1);
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+  }
+  
+  .tabs button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  .tab {
+    display: none;
+    flex-direction: column;
+  }
+  
+  .tab.active {
+    display: flex;
+  }
+  
+  .tab input {
+    margin-bottom: 0.8rem;
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: 1px solid #777904;
+    border-radius: 4px;
+  }
+  
+  .tab button {
+    padding: 0.8rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .tab button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      padding: 1rem;
+    }
+  
+    .tabs button {
+      font-size: 0.9rem;
+    }
+  }
