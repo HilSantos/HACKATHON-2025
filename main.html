@@ -3,53 +3,60 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Login | Cadastro | Recuperar Senha</title>
-  <link rel="stylesheet" href="style.css">
-  </head>
+  <link rel="stylesheet" href="style.css"/>
+</head>
 <body>
-  <div class="container">
-    <div class="tabs">
-      <button onclick="showTab('login')">Login</button>
-      <button onclick="showTab('cadastro')">Cadastro</button>
-      <button onclick="showTab('recupera')">Rec. Senha</button>
+  <div class="container"> <!-- Container principal para o conteúdo da página -->
+    <div class="tabs"> <!-- Container para os botões de aba -->
+      <button onclick="showTab('login')">Login</button> <!-- Botão para mostrar a aba de Login -->
+      <button onclick="showTab('cadastro')">Cadastro</button> <!-- Botão para mostrar a aba de Cadastro -->
+      <button onclick="showTab('recupera')">Rec. Senha</button> <!-- Botão para mostrar a aba de Recuperação de Senha -->
     </div>
 
-    <div id="login" class="tab active">
-      <h2>Login</h2>
-      <input type="email" placeholder="Email">
-      <input type="password" placeholder="Senha">
-      <button>Entrar</button>
+    <div id="login" class="tab active"> <!-- Aba de Login ativa por padrão -->
+      <h2>Login</h2> <!-- Título da aba de Login -->
+      <input type="email" placeholder="Email"/> <!-- Campo de entrada para Email -->
+      <input type="password" placeholder="Senha"/> <!-- Campo de entrada para Senha -->
+      <button>Entrar</button> <!-- Botão para entrar no sistema -->
     </div>
 
-    <div id="cadastro" class="tab">
-      <h2>Cadastro</h2>
-      <input type="email" placeholder="Email">
-      <input type="text" placeholder="Nome">
-      <input type="date" placeholder="Data de Nascimento">
-      <input type="text" placeholder="Endereço Detalhado">
-      <input type="password" placeholder="Senha">
-      <input type="text" placeholder="Registro Europeu">
-      <input type="text" placeholder="Tempero">
-      <input type="tel" placeholder="Telefone">
-      <button>Cadastrar</button>
+    <div id="cadastro" class="tab"> <!-- Aba de Cadastro -->
+      <h2>Cadastro</h2> <!-- Título da aba de Cadastro -->
+      <input type="email" placeholder="Email"/> <!-- Campo de entrada para Email -->
+      <input type="text" placeholder="Nome"/> <!-- Campo de entrada para Nome -->
+      <input type="date" placeholder="Data de Nascimento"/> <!-- Campo de entrada para Data de Nascimento -->
+      <input type="text" placeholder="Endereço Detalhado"/> <!-- Campo de entrada para Endereço Detalhado -->
+      <input type="password" placeholder="Senha"/> <!-- Campo de entrada para Senha -->
+      <input type="text" placeholder="Registro Europeu"/> <!-- Campo de entrada para Registro Europeu -->
+      <input type="text" placeholder="Tempero"/> <!-- Campo de entrada para Tempero -->
+      <input type="tel" placeholder="Telefone"/> <!-- Campo de entrada para Telefone -->
+      <button>Cadastrar</button> <!-- Botão para cadastrar um novo usuário -->
     </div>
 
-    <div id="recupera" class="tab">
-      <h2>Recuperar Senha</h2>
-      <input type="text" placeholder="Código">
-      <input type="password" placeholder="Nova Senha">
-      <input type="password" placeholder="Confirmar Nova Senha">
-      <button>Redefinir Senha</button>
+    <div id="recupera" class="tab"> <!-- Aba de Recuperação de Senha -->
+      <h2>Recuperar Senha</h2> <!-- Título da aba de Recuperação de Senha -->
+      <input type="text" placeholder="Código"/> <!-- Campo de entrada para Código -->
+      <input type="password" placeholder="Nova Senha"/> <!-- Campo de entrada para Nova Senha -->
+      <input type="password" placeholder="Confirmar Nova Senha"/> <!-- Campo de entrada para Confirmar Nova Senha -->
+      <button>Redefinir Senha</button> <!-- Botão para redefinir a senha -->
     </div>
   </div>
 
-  <script>
-    function showTab(tabId) {
-      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-      document.getElementById(tabId).classList.add('active');
+  <script> // Função para mostrar a aba selecionada e esconder as outras abas //
+    function showTab(tabId) { 
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active')); // Remove a classe 'active' de todas //
+      // as abas //
+      document.getElementById(tabId).classList.add('active'); // Adiciona a classe 'active' à aba selecionada //
     }
+
+    // Pega o idioma selecionado na URL (ex: ?lang=pt) //
+    const params = new URLSearchParams(window.location.search); 
+    const lang = params.get('lang', selectedLang); // Pega o parâmetro 'lang' da URL, se existir //
+    const selectedLang = lang || 'en'; // Se não houver parâmetro, define o idioma padrão como 'en' //
+    console.log("Idioma selecionado:", lang);
   </script>
 </body>
 </html>
