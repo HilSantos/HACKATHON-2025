@@ -6,174 +6,169 @@
 index.html
 
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br"> <!-- Define o idioma da página como Português -->
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Seleção de Idioma</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="language-screen">
+  <div class="language-screen"> <!-- Divisão para estruturar a seção de seleção de idioma -->
     <h1>Selecione o idioma</h1>
-    <button onclick="window.location.href='main.html'">Português</button>
-    <button onclick="window.location.href='main.html'">English</button>
-    <button onclick="window.location.href='main.html'">Español</button>
-    <button onclick="window.location.href='main.html'">Italiano</button>
-    <button onclick="window.location.href='main.html'">Français</button>
-    <button onclick="window.location.href='main.html'">Deutsch</button>
-    <button onclick="window.location.href='main.html'">Cymraeg</button>
-    <button onclick="window.location.href='main.html'">Gàidhlig na h-Alba</button>
-    <button onclick="window.location.href='main.html'">Gaeilge</button>
-    <button onclick="window.location.href='main.html'">Nederlands</button>
-    <button onclick="window.location.href='main.html'">Lëtzebuergesch</button>
-    <button onclick="window.location.href='main.html'">Dansk</button>
-    <button onclick="window.location.href='main.html'">Norsk</button>
-    <button onclick="window.location.href='main.html'">Suomalainen</button>
-    <button onclick="window.location.href='main.html'">Svenska</button>
-    <button onclick="window.location.href='main.html'">Català</button>
-    <button onclick="window.location.href='main.html'">Malti</button>
-    <button onclick="window.location.href='main.html'">ελληνικά</button>
-    <button onclick="window.location.href='main.html'">Íslenskur</button>
-  </div>
+    <div class="language-grid"> <!-- Container que organiza os cartões de idioma -->
+      <!-- Cada cartão de idioma é uma div com um botão e uma descrição -->
+      <div class="language-card"> <!-- Cartão para seleção de idioma Inglês -->
+        <button onclick="selectLanguage('pt')">Português</button> <!-- Botão que chama a função selectLanguage com o código
+         do idioma -->
+        <p>Língua oficial de Portugal e Brasil</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Inglês -->
+        <button onclick="selectLanguage('en')">English</button>
+        <p>Official language of the US and UK</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Espanhol -->
+        <button onclick="selectLanguage('es')">Español</button>
+        <p>Idioma oficial de España</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Francês -->
+        <button onclick="selectLanguage('fr')">Français</button>
+        <p>Langue officielle de la France et de Monaco</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Alemão -->
+        <button onclick="selectLanguage('de')">Deutsch</button>
+        <p>Amtssprache in Deutschland, der Schweiz und Österreichs</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Italiano -->
+        <button onclick="selectLanguage('it')">Italiano</button>
+        <p>Lingua ufficiale d'Italia e San Marino</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Galês -->
+        <button onclick="selectLanguage('welsh')">Cymraeg</button>
+        <p>Iaith swyddogol Cymru</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Catalão -->
+        <button onclick="selectLanguage('catalan')">Català</button>
+        <p>Llengua oficial de Catalunya i Andorra</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Irlandês -->
+        <button onclick="selectLanguage('gaelic')">Gaeilge</button>
+        <p>Teanga oifigiúil na hÉireann</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Escocês Gaélico -->
+        <button onclick="selectLanguage('scots-gaelic')">Gàidhlig na h-Alba</button>
+        <p>cànan oifigeil na h-Alba</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Romeno -->
+        <button onclick="selectLanguage('latin')">Latina</button>
+        <p>Lingua classica Romana</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Holandês -->
+        <button onclick="selectLanguage('dutch')">Nederlands</button>
+        <p>Officiële taal van Nederland</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Sueco -->
+        <button onclick="selectLanguage('swedish')">Svenska</button>
+        <p>Officiellt språk i Sverige</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Norueguês -->
+        <button onclick="selectLanguage('norwegian')">Norsk</button>
+        <p>Offisielt språk i Norge</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Dinamarquês -->
+        <button onclick="selectLanguage('danish')">Dansk</button>
+        <p>Officielt sprog i Danmark</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Finlandês -->
+        <button onclick="selectLanguage('finnish')">Suomi</button>
+        <p>Virallinen kieli Suomessa</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Islandês -->
+        <button onclick="selectLanguage('icelandic')">Íslenska</button>
+        <p>Opinbera tungumál Íslands</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Grego -->
+        <button onclick="selectLanguage('greek')">Elliniká</button>
+        <p>Epísimi glóssa tis Elládas</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Maltês -->
+        <button onclick="selectLanguage('maltese')">Malti</button>
+        <p>Lingwa ufficjali ta' Malta</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Luxemburguês -->
+         <button onclick="selectLanguage('luxembourgish')">Lëtzebuergesch</button>
+        <p>Offiziellt Sprooch vu Lëtzebuerg</p>
+      </div>
+      <script>
+    function selectLanguage(langCode) {
+      window.location.href = 'main.html?lang=' + langCode;
+    }
+  </script>
 </body>
 </html>
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 main.html
 
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Login | Cadastro | Recuperar Senha</title>
-  <link rel="stylesheet" href="style.css">
-<style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background-color: #f2f2f2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.language-screen {
-  text-align: center;
-  padding: 2rem;
-}
-
-.language-screen button {
-  margin: 0.5rem;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-}
-
-.container {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.tabs {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 1rem;
-}
-
-.tabs button {
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-}
-
-.tab {
-  display: none;
-  flex-direction: column;
-}
-
-.tab.active {
-  display: flex;
-}
-
-.tab input {
-  margin-bottom: 0.8rem;
-  padding: 0.6rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.tab button {
-  padding: 0.8rem;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.tab button:hover {
-  background-color: #0056b3;
-}
-
-@media (max-width: 600px) {
-  .container {
-    padding: 1rem;
-  }
-
-  .tabs button {
-    font-size: 0.9rem;
-  }
-}
-</style>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div class="container">
-    <div class="tabs">
-      <button onclick="showTab('login')">Login</button>
-      <button onclick="showTab('cadastro')">Cadastro</button>
-      <button onclick="showTab('recupera')">Rec. Senha</button>
+  <div class="container"> <!-- Container principal para o conteúdo da página -->
+    <div class="tabs"> <!-- Container para os botões de aba -->
+      <button onclick="showTab('login')">Login</button> <!-- Botão para mostrar a aba de Login -->
+      <button onclick="showTab('cadastro')">Cadastro</button> <!-- Botão para mostrar a aba de Cadastro -->
+      <button onclick="showTab('recupera')">Rec. Senha</button> <!-- Botão para mostrar a aba de Recuperação de Senha -->
     </div>
 
-    <div id="login" class="tab active">
-      <h2>Login</h2>
-      <input type="email" placeholder="Email">
-      <input type="password" placeholder="Senha">
-      <button>Entrar</button>
+    <div id="login" class="tab active"> <!-- Aba de Login ativa por padrão -->
+      <h2>Login</h2> <!-- Título da aba de Login -->
+      <input type="email" placeholder="Email"/> <!-- Campo de entrada para Email -->
+      <input type="password" placeholder="Senha"/> <!-- Campo de entrada para Senha -->
+      <button>Entrar</button> <!-- Botão para entrar no sistema -->
     </div>
 
-    <div id="cadastro" class="tab">
-      <h2>Cadastro</h2>
-      <input type="email" placeholder="Email">
-      <input type="text" placeholder="Nome">
-      <input type="date" placeholder="Data de Nascimento">
-      <input type="text" placeholder="Endereço Detalhado">
-      <input type="password" placeholder="Senha">
-      <input type="text" placeholder="Registro Europeu">
-      <input type="text" placeholder="Tempero">
-      <input type="tel" placeholder="Telefone">
-      <button>Cadastrar</button>
+    <div id="cadastro" class="tab"> <!-- Aba de Cadastro -->
+      <h2>Cadastro</h2> <!-- Título da aba de Cadastro -->
+      <input type="email" placeholder="Email"/> <!-- Campo de entrada para Email -->
+      <input type="text" placeholder="Nome"/> <!-- Campo de entrada para Nome -->
+      <input type="date" placeholder="Data de Nascimento"/> <!-- Campo de entrada para Data de Nascimento -->
+      <input type="text" placeholder="Endereço Detalhado"/> <!-- Campo de entrada para Endereço Detalhado -->
+      <input type="password" placeholder="Senha"/> <!-- Campo de entrada para Senha -->
+      <input type="text" placeholder="Registro Europeu"/> <!-- Campo de entrada para Registro Europeu -->
+      <input type="text" placeholder="Tempero"/> <!-- Campo de entrada para Tempero -->
+      <input type="tel" placeholder="Telefone"/> <!-- Campo de entrada para Telefone -->
+      <button>Cadastrar</button> <!-- Botão para cadastrar um novo usuário -->
     </div>
 
-    <div id="recupera" class="tab">
-      <h2>Recuperar Senha</h2>
-      <input type="text" placeholder="Código">
-      <input type="password" placeholder="Nova Senha">
-      <input type="password" placeholder="Confirmar Nova Senha">
-      <button>Redefinir Senha</button>
+    <div id="recupera" class="tab"> <!-- Aba de Recuperação de Senha -->
+      <h2>Recuperar Senha</h2> <!-- Título da aba de Recuperação de Senha -->
+      <input type="text" placeholder="Código"/> <!-- Campo de entrada para Código -->
+      <input type="password" placeholder="Nova Senha"/> <!-- Campo de entrada para Nova Senha -->
+      <input type="password" placeholder="Confirmar Nova Senha"/> <!-- Campo de entrada para Confirmar Nova Senha -->
+      <button>Redefinir Senha</button> <!-- Botão para redefinir a senha -->
     </div>
   </div>
 
-  <script>
-    function showTab(tabId) {
-      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-      document.getElementById(tabId).classList.add('active');
+  <script> // Função para mostrar a aba selecionada e esconder as outras abas //
+    function showTab(tabId) { 
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active')); // Remove a classe 'active' de todas //
+      // as abas //
+      document.getElementById(tabId).classList.add('active'); // Adiciona a classe 'active' à aba selecionada //
     }
+
+    // Pega o idioma selecionado na URL (ex: ?lang=pt) //
+    const params = new URLSearchParams(window.location.search); 
+    const lang = params.get('lang', selectedLang); // Pega o parâmetro 'lang' da URL, se existir //
+    const selectedLang = lang || 'en'; // Se não houver parâmetro, define o idioma padrão como 'en' //
+    console.log("Idioma selecionado:", lang);
   </script>
 </body>
 </html>
