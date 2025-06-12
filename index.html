@@ -1,59 +1,104 @@
 //webpage responsiva em HTML e CSS tanto em desktop como em mobile//
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br"> <!-- Define o idioma da página como Português -->
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Seleção de Idioma</title>
-  <link rel="stylesheet" href="style.css">
-    <script>
-        function showTab(tabId) {
-        const tabs = document.querySelectorAll('.tab');
-        tabs.forEach(tab => {
-            tab.classList.remove('active');
-        });
-        document.getElementById(tabId).classList.add('active');
-        }
-    </script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="language-screen">
+  <div class="language-screen"> <!-- Divisão para estruturar a seção de seleção de idioma -->
     <h1>Selecione o idioma</h1>
-    <button onclick="window.location.href='main.html'">Português</button>
-    //lingua oficial de Portugal e Brasil//
-    <button onclick="window.location.href='main.html'">English</button>
-    //lingua oficial dos Estados Unidos e Inglaterra//
-    <button onclick="window.location.href='main.html'">Español</button>
-    //lingua oficial da Espanha//
-    <button onclick="window.location.href='main.html'">Italiano</button>
-    //lingua oficial da Itália//
-    <button onclick="window.location.href='main.html'">Français</button>
-    //lingua oficial da França//
-    <button onclick="window.location.href='main.html'">Deutsch</button>
-    //lingua oficial da Alemanha//
-    <button onclick="window.location.href='main.html'">Cymraeg</button>
-    //lingua oficial do País de Gales//
-    <button onclick="window.location.href='main.html'">Gàidhlig na h-Alba</button>
-    //lingua oficial da Escócia//
-    <button onclick="window.location.href='main.html'">Gaeilge</button>
-    //lingua oficial da Irlanda//
-    <button onclick="window.location.href='main.html'">Nederlands</button>
-    //lingua oficial dos Países Baixos//
-    <button onclick="window.location.href='main.html'">Lëtzebuergesch</button>
-    //lingua oficial de Luxemburgo//
-    <button onclick="window.location.href='main.html'">Dansk</button>
-    //lingua oficial da Dinamarca//
-    <button onclick="window.location.href='main.html'">Norsk</button>
-    //lingua oficial da Noruega//
-    <button onclick="window.location.href='main.html'">Suomalainen</button>
-    //lingua oficial da Finlândia//
-    <button onclick="window.location.href='main.html'">Svenska</button>
-    //lingua oficial da Suécia//
-    <button onclick="window.location.href='main.html'">Català</button>
-    //lingua oficial da Catalunha//
-    <button onclick="window.location.href='main.html'">Malti</button>
-    //lingua oficial de Malta//
-  </div>
+    <div class="language-grid"> <!-- Container que organiza os cartões de idioma -->
+      <!-- Cada cartão de idioma é uma div com um botão e uma descrição -->
+      <div class="language-card"> <!-- Cartão para seleção de idioma Inglês -->
+        <button onclick="selectLanguage('pt')">Português</button> <!-- Botão que chama a função selectLanguage com o código
+         do idioma -->
+        <p>Língua oficial de Portugal e Brasil</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Inglês -->
+        <button onclick="selectLanguage('en')">English</button>
+        <p>Official language of the US and UK</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Espanhol -->
+        <button onclick="selectLanguage('es')">Español</button>
+        <p>Idioma oficial de España</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Francês -->
+        <button onclick="selectLanguage('fr')">Français</button>
+        <p>Langue officielle de la France et de Monaco</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Alemão -->
+        <button onclick="selectLanguage('de')">Deutsch</button>
+        <p>Amtssprache in Deutschland, der Schweiz und Österreichs</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Italiano -->
+        <button onclick="selectLanguage('it')">Italiano</button>
+        <p>Lingua ufficiale d'Italia e San Marino</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Galês -->
+        <button onclick="selectLanguage('welsh')">Cymraeg</button>
+        <p>Iaith swyddogol Cymru</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Catalão -->
+        <button onclick="selectLanguage('catalan')">Català</button>
+        <p>Llengua oficial de Catalunya i Andorra</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Irlandês -->
+        <button onclick="selectLanguage('gaelic')">Gaeilge</button>
+        <p>Teanga oifigiúil na hÉireann</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Escocês Gaélico -->
+        <button onclick="selectLanguage('scots-gaelic')">Gàidhlig na h-Alba</button>
+        <p>cànan oifigeil na h-Alba</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Romeno -->
+        <button onclick="selectLanguage('latin')">Latina</button>
+        <p>Lingua classica Romana</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Holandês -->
+        <button onclick="selectLanguage('dutch')">Nederlands</button>
+        <p>Officiële taal van Nederland</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Sueco -->
+        <button onclick="selectLanguage('swedish')">Svenska</button>
+        <p>Officiellt språk i Sverige</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Norueguês -->
+        <button onclick="selectLanguage('norwegian')">Norsk</button>
+        <p>Offisielt språk i Norge</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Dinamarquês -->
+        <button onclick="selectLanguage('danish')">Dansk</button>
+        <p>Officielt sprog i Danmark</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Finlandês -->
+        <button onclick="selectLanguage('finnish')">Suomi</button>
+        <p>Virallinen kieli Suomessa</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Islandês -->
+        <button onclick="selectLanguage('icelandic')">Íslenska</button>
+        <p>Opinbera tungumál Íslands</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Grego -->
+        <button onclick="selectLanguage('greek')">Elliniká</button>
+        <p>Epísimi glóssa tis Elládas</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Maltês -->
+        <button onclick="selectLanguage('maltese')">Malti</button>
+        <p>Lingwa ufficjali ta' Malta</p>
+      </div>
+      <div class="language-card"> <!-- Cartão para seleção de idioma Luxemburguês -->
+         <button onclick="selectLanguage('luxembourgish')">Lëtzebuergesch</button>
+        <p>Offiziellt Sprooch vu Lëtzebuerg</p>
+      </div>
+      <script>
+    function selectLanguage(langCode) {
+      window.location.href = 'main.html?lang=' + langCode;
+    }
+  </script>
 </body>
 </html>
