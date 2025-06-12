@@ -2,82 +2,131 @@
 //Segunda tela = Login    Cadastro    Rec.senha//
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f2f2f2bb;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
-  
-  .language-screen {
-    text-align: center;
-    padding: 2rem;
-  }
-  
-  .language-screen button {
-    margin: 0.5rem;
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-  }
-  
-  .container {
-    background-color: #b85c5c;
-    padding: 2rem;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 400px;
-    box-shadow: 0 0 10px rgba(49, 48, 48, 0.1);
-  }
-  
-  .tabs {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 1rem;
-  }
-  
-  .tabs button {
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-  }
-  
-  .tab {
-    display: none;
-    flex-direction: column;
-  }
-  
-  .tab.active {
-    display: flex;
-  }
-  
-  .tab input {
-    margin-bottom: 0.8rem;
-    padding: 0.6rem;
-    font-size: 1rem;
-    border: 1px solid #777904;
-    border-radius: 4px;
-  }
-  
-  .tab button {
-    padding: 0.8rem;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .tab button:hover {
-    background-color: #0056b3;
-  }
-  
-  @media (max-width: 600px) {
-    .container {
-      padding: 1rem;
-    }
-  
-    .tabs button {
-      font-size: 0.9rem;
-    }
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #a0b9c8;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.language-screen {
+  text-align: center;
+  padding: 2rem;
+  max-width: 1000px;
+}
+
+.language-screen h1 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #1a1a1a;
+}
+
+.language-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.language-card {
+  background-color: #f1ea87;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.language-card:hover {
+  transform: translateY(-4px);
+}
+
+.language-card button {
+  background-color: #250a0b;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.language-card button:hover,
+.language-card button:focus {
+  background-color: #003f88;
+  outline: 3px solid #ffcc00;
+}
+
+.language-card button:focus-visible {
+  outline: 3px solid #ffcc00;
+}
+
+.language-card p {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.container {
+  background-color: #f1ea87;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin-top: 2rem;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.tabs button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background-color: #160768c0;
+  color: rgb(252, 246, 246);
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.tabs button:hover {
+  background-color: #003f88;
+}
+
+.tab {
+  display: none;
+  flex-direction: column;
+}
+
+.tab.active {
+  display: flex;
+}
+
+.tab input {
+  margin-bottom: 0.8rem;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.tab button {
+  padding: 0.8rem;
+  background-color: #28a745;
+  color: rgb(5, 5, 5);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tab button:hover {
+  background-color: #218838;
+}
